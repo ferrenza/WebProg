@@ -1,0 +1,8 @@
+asgiref==3.3.1
+cryptography==42.0.5
+Django==5.0.4
+pip==24.0
+wheel==0.43.0
+urllib3==1.26.3
+uvicorn==0.13.3
+passlib[bcrypt]==1.7.4
