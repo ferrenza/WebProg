@@ -1,0 +1,55 @@
+<!-- main/templates/home.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ferrenza Tugas4</title>
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            overflow: hidden;
+        }
+
+        .text {
+            position: absolute;
+            white-space: nowrap;
+            animation: moveText 10s linear infinite;
+            font-size: 3em; /* Besarin tek disinih */
+        }
+
+        @keyframes moveText {
+            0% {
+                transform: translateX(100%);
+            }
+            100% {
+                transform: translateX(-100%);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="text" id="changingText">Ferrenza Tugas 4</div>
+
+    <script>
+        const textElement = document.getElementById('changingText');
+        const colors = ['red', 'green', 'blue', 'yellow', 'cyan', 'magenta', 'white'];
+        let colorIndex = 0;
+
+        function changeColor() {
+            textElement.style.color = colors[colorIndex];
+            colorIndex = (colorIndex + 1) % colors.length;
+        }
+
+        setInterval(changeColor, 1000);
+    </script>
+</body>
+</html>
